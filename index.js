@@ -55,4 +55,3 @@ let right = document.querySelector(".right")
 upload_process(right)
 
 document.querySelector(".process").addEventListener("click", handleProcess);
-document.querySelector(".newPhoto").addEventListener("click", uploadNewPhoto);
