@@ -1,0 +1,339 @@
+
+--------------------JS---------------------
+
+// let main = document.querySelector("main")
+
+// let left = document.createElement("div")
+// let logo = document.createElement("a")
+// let description = document.createElement("div")
+// let title = document.createElement("h2")
+// let p = document.createElement("p")
+// let right = document.createElement("div")
+// let right_main = document.createElement("div")
+// let h2_upload_image = document.createElement("h2")
+// let btns = document.createElement("div")
+// let row = document.createElement("div")
+// let custom_upload = document.createElement("label")
+// let fileInput = document.createElement("input")
+// let select = document.createElement("select")
+
+// for (let opt of options) {
+//     let option = document.createElement("option")
+//     option.innerHTML = opt
+//     option.value = opt.toLowerCase()
+//     select.append(option)
+// }
+
+// let process = document.createElement("button")
+// let right_footer = document.createElement("div")
+// let right_footer_logo = document.createElement("div")
+// let links = document.createElement("div")
+// let link1 = document.createElement("a")
+// let separator = document.createElement("div")
+// let link2 = document.createElement("a")
+
+// left.classList.add('left')
+// logo.classList.add('logo')
+// description.classList.add('description')
+// title.classList.add('title')
+// right.classList.add('right')
+// right_main.classList.add('right_main')
+// btns.classList.add('btns')
+// row.classList.add('row')
+// custom_upload.classList.add('custom-upload')
+// process.classList.add('process')
+// right_footer.classList.add('right_footer')
+// right_footer_logo.classList.add('right_footer_logo')
+// links.classList.add('links')
+// separator.classList.add('separator')
+
+// logo.href = "/"
+// logo.innerHTML = "OCR"
+// title.innerHTML = "Upload an image"
+// p.innerHTML = "and the system will help figure out what text is in the photo"
+// h2_upload_image.innerHTML = "Upload image"
+// custom_upload.htmlFor = "fileInput"
+// custom_upload.innerHTML = "Upload"
+// fileInput.id = 'fileInput'
+// fileInput.accept = '.png, .jpeg, .jpg, .pdf'
+// fileInput.type = 'file'
+// select.id = 'languages'
+// select.name = 'languages'
+// process.innerHTML = 'Process'
+// right_footer_logo.innerHTML = 'Photo recognizer'
+// link1.innerHTML = 'Terms of use'
+// link1.href = '#'
+// separator.innerHTML = '|'
+// link2.innerHTML = 'Students about'
+// link2.href = '#'
+
+// left.append(logo, description)
+// description.append(title, p)
+// right.append(right_main, right_footer)
+// right_main.append(h2_upload_image, btns)
+// btns.append(row, process)
+// row.append(custom_upload, fileInput, select)
+// right_footer.append(right_footer_logo, links)
+// links.append(link1, separator, link2)
+
+// main.append(left, right)
+
+
+// process.onclick = () => {
+//     left.querySelector(".description").innerHTML = `<div id="preview"></div>`;
+//     right.innerHTML = `<h2 class="output_title">Output</h2>
+//     <div class="wrap">
+//     <p class="output_text">some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text some text </p>
+//     </div>
+//     <div class="row">
+//     <button class="newPhoto">Upload new Photo</button>
+//     <button class="copy">Copy</button>
+//     </div>
+//     `;
+
+//     output_text = document.querySelector(".output_text")
+//     copy = document.querySelector(".copy")
+//     left.classList.add("processed_width");
+//     right.classList.add("processed_width");
+
+//     const file = fileInput.files[0];
+
+//     if (file) {
+//         if (file.type.startsWith('image/')) {
+//             const reader = new FileReader();
+//             reader.onload = (e) => {
+//                 preview.innerHTML = `<img src="${e.target.result}" alt="Preview" width="fit-content" />`;
+//             }
+//             reader.readAsDataURL(file);
+//         } else {
+//             preview.textContent = `Selected file: ${file.name}`;
+//         }
+//     }
+
+
+//     copy.onclick = () => {
+//         navigator.clipboard.writeText(output_text.textContent).then(() => {
+//             alert("Текст успешно скопирован!");
+//         }).catch(err => {
+//             console.error("Ошибка при копировании текста: ", err);
+//         });
+//     }
+// }
+
+
+-------------------HTML--------------------
+<!-- <h2 class="title">Upload an image</h2>
+                <p>and the system will help figure out what text is in the photo</p> -->
+-------------------------------------------
+ <!-- <div class="right_main">
+                <h2>Upload image</h2>
+
+                <div class="btns">
+                    <div class="row">
+                        <label for="fileInput" class="custom-upload">Upload</label>
+                        <input id="fileInput" accept=".png, .jpg, .jpeg, .pdf" type="file" />
+                        <select name="languages" id="languages">
+                            <option value="" disabled selected>Language</option>
+                            <option value="Russian">Russian</option>
+                            <option value="English">English</option>
+                            <option value="Uzbek">Uzbek</option>
+                        </select>
+                    </div>
+                    <button class="process">Process</button>
+                </div>
+
+            </div>
+            <div class="right_footer">
+                <div class="right_footer_logo">Aleksey Gay</div>
+                <div class="links">
+                    <a href="#">Terms of use</a>
+                    <div class="separator">|</div>
+                    <a href="#">Privacy police</a>
+                </div>
+            </div> -->
+
+-------------------------------------------
+  <!-- <div class="left processed_width">
+            <a href="/" class="logo">OCR</a>
+            <div class="description">
+                <div id="preview"><img src="./img/ЛОГО.png" alt="Preview" width="fit-content" /></div>
+            </div>
+        </div>
+        <div class="right processed_width">
+            <h2 class="output_title">Output</h2>
+            <div class="wrap">
+                <p class="output_text">Formal name: The Republic of Uzbekistan
+
+                    Location of Uzbekistan: The Republic of Uzbekistan is situated in the central part of Central Asia
+                    between two rivers: Amu Darya and Syr Darya. There are Turan Lowland in the northwest, and Tien-Shan
+                    and Pamir-Alay mountain ridges in the southeast of the territory. Kyzyl Kum Desert is in the North.
+                    Uzbekistan borders Turkmenistan, Kazakhstan, Tadjikistan, and Afghanistan in the South.
+
+                    Capital: Tashkent Read more...
+
+                    Area: total 448.900 km2: land: 425.400 km2, water: 22,000 km2.
+
+                    Land boundaries: total: 6.221 km, border countries: Afghanistan 137 km, Kazakhstan 2.203 km,
+                    Kyrgyzstan 1.099 km, Tajikistan 1.161 km, Turkmenistan 1.621 km Read more...
+
+                    Population: more than 31,5 million people Read more...
+
+                    Language: Uzbekistan is multination country. Uzbek is the state language, Russian is the language of
+                    international communication.
+
+                    Administrative and Territorial Structure: Autonomous Republic of Karakalpakistan, 12 regions, 226
+                    cities and districts.
+
+                    Religion: Islam Read more...
+
+                    Currency: All payments must be done in sum, the national currency of the Republic of Uzbekistan.
+                    Currency exchange offices are available in every city of Uzbekistan. Read more...
+
+                    National Symbols: Flag of Uzbekistan, Emblem of Uzbekistan.
+
+                    Climate: The climate of Uzbekistan is extremely continental with a great number of sunny days.
+                    Average monthly temperature in January is from 10 to +3oC. Summer is hot and dry. Average monthly
+                    temperature in July is from +35 to +45oC. Autumn is warm enough and is the season when delicious
+                    fruits and vegetables are in abundance in numerous bazaars (markets). Average annual temperature is
+                    13oC. Read more...Formal name: The Republic of Uzbekistan
+
+                    Location of Uzbekistan: The Republic of Uzbekistan is situated in the central part of Central Asia
+                    between two rivers: Amu Darya and Syr Darya. There are Turan Lowland in the northwest, and Tien-Shan
+                    and Pamir-Alay mountain ridges in the southeast of the territory. Kyzyl Kum Desert is in the North.
+                    Uzbekistan borders Turkmenistan, Kazakhstan, Tadjikistan, and Afghanistan in the South.
+
+                    Capital: Tashkent Read more...
+
+                    Area: total 448.900 km2: land: 425.400 km2, water: 22,000 km2.
+
+                    Land boundaries: total: 6.221 km, border countries: Afghanistan 137 km, Kazakhstan 2.203 km,
+                    Kyrgyzstan 1.099 km, Tajikistan 1.161 km, Turkmenistan 1.621 km Read more...
+
+                    Population: more than 31,5 million people Read more...
+
+                    Language: Uzbekistan is multination country. Uzbek is the state language, Russian is the language of
+                    international communication.
+
+                    Administrative and Territorial Structure: Autonomous Republic of Karakalpakistan, 12 regions, 226
+                    cities and districts.
+
+                    Religion: Islam Read more...
+
+                    Currency: All payments must be done in sum, the national currency of the Republic of Uzbekistan.
+                    Currency exchange offices are available in every city of Uzbekistan. Read more...
+
+                    National Symbols: Flag of Uzbekistan, Emblem of Uzbekistan.
+
+                    Climate: The climate of Uzbekistan is extremely continental with a great number of sunny days.
+                    Average monthly temperature in January is from 10 to +3oC. Summer is hot and dry. Average monthly
+                    temperature in July is from +35 to +45oC. Autumn is warm enough and is the season when delicious
+                    fruits and vegetables are in abundance in numerous bazaars (markets). Average annual temperature is
+                    13oC. Read more...Formal name: The Republic of Uzbekistan
+
+                    Location of Uzbekistan: The Republic of Uzbekistan is situated in the central part of Central Asia
+                    between two rivers: Amu Darya and Syr Darya. There are Turan Lowland in the northwest, and Tien-Shan
+                    and Pamir-Alay mountain ridges in the southeast of the territory. Kyzyl Kum Desert is in the North.
+                    Uzbekistan borders Turkmenistan, Kazakhstan, Tadjikistan, and Afghanistan in the South.
+
+                    Capital: Tashkent Read more...
+
+                    Area: total 448.900 km2: land: 425.400 km2, water: 22,000 km2.
+
+                    Land boundaries: total: 6.221 km, border countries: Afghanistan 137 km, Kazakhstan 2.203 km,
+                    Kyrgyzstan 1.099 km, Tajikistan 1.161 km, Turkmenistan 1.621 km Read more...
+
+                    Population: more than 31,5 million people Read more...
+
+                    Language: Uzbekistan is multination country. Uzbek is the state language, Russian is the language of
+                    international communication.
+
+                    Administrative and Territorial Structure: Autonomous Republic of Karakalpakistan, 12 regions, 226
+                    cities and districts.
+
+                    Religion: Islam Read more...
+
+                    Currency: All payments must be done in sum, the national currency of the Republic of Uzbekistan.
+                    Currency exchange offices are available in every city of Uzbekistan. Read more...
+
+                    National Symbols: Flag of Uzbekistan, Emblem of Uzbekistan.
+
+                    Climate: The climate of Uzbekistan is extremely continental with a great number of sunny days.
+                    Average monthly temperature in January is from 10 to +3oC. Summer is hot and dry. Average monthly
+                    temperature in July is from +35 to +45oC. Autumn is warm enough and is the season when delicious
+                    fruits and vegetables are in abundance in numerous bazaars (markets). Average annual temperature is
+                    13oC. Read more...
+                    Formal name: The Republic of Uzbekistan
+
+                    Location of Uzbekistan: The Republic of Uzbekistan is situated in the central part of Central Asia
+                    between two rivers: Amu Darya and Syr Darya. There are Turan Lowland in the northwest, and Tien-Shan
+                    and Pamir-Alay mountain ridges in the southeast of the territory. Kyzyl Kum Desert is in the North.
+                    Uzbekistan borders Turkmenistan, Kazakhstan, Tadjikistan, and Afghanistan in the South.
+
+                    Capital: Tashkent Read more...
+
+                    Area: total 448.900 km2: land: 425.400 km2, water: 22,000 km2.
+
+                    Land boundaries: total: 6.221 km, border countries: Afghanistan 137 km, Kazakhstan 2.203 km,
+                    Kyrgyzstan 1.099 km, Tajikistan 1.161 km, Turkmenistan 1.621 km Read more...
+
+                    Population: more than 31,5 million people Read more...
+
+                    Language: Uzbekistan is multination country. Uzbek is the state language, Russian is the language of
+                    international communication.
+
+                    Administrative and Territorial Structure: Autonomous Republic of Karakalpakistan, 12 regions, 226
+                    cities and districts.
+
+                    Religion: Islam Read more...
+
+                    Currency: All payments must be done in sum, the national currency of the Republic of Uzbekistan.
+                    Currency exchange offices are available in every city of Uzbekistan. Read more...
+
+                    National Symbols: Flag of Uzbekistan, Emblem of Uzbekistan.
+
+                    Climate: The climate of Uzbekistan is extremely continental with a great number of sunny days.
+                    Average monthly temperature in January is from 10 to +3oC. Summer is hot and dry. Average monthly
+                    temperature in July is from +35 to +45oC. Autumn is warm enough and is the season when delicious
+                    fruits and vegetables are in abundance in numerous bazaars (markets). Average annual temperature is
+                    13oC. Read more...
+                    Formal name: The Republic of Uzbekistan
+
+                    Location of Uzbekistan: The Republic of Uzbekistan is situated in the central part of Central Asia
+                    between two rivers: Amu Darya and Syr Darya. There are Turan Lowland in the northwest, and Tien-Shan
+                    and Pamir-Alay mountain ridges in the southeast of the territory. Kyzyl Kum Desert is in the North.
+                    Uzbekistan borders Turkmenistan, Kazakhstan, Tadjikistan, and Afghanistan in the South.
+
+                    Capital: Tashkent Read more...
+
+                    Area: total 448.900 km2: land: 425.400 km2, water: 22,000 km2.
+
+                    Land boundaries: total: 6.221 km, border countries: Afghanistan 137 km, Kazakhstan 2.203 km,
+                    Kyrgyzstan 1.099 km, Tajikistan 1.161 km, Turkmenistan 1.621 km Read more...
+
+                    Population: more than 31,5 million people Read more...
+
+                    Language: Uzbekistan is multination country. Uzbek is the state language, Russian is the language of
+                    international communication.
+
+                    Administrative and Territorial Structure: Autonomous Republic of Karakalpakistan, 12 regions, 226
+                    cities and districts.
+
+                    Religion: Islam Read more...
+
+                    Currency: All payments must be done in sum, the national currency of the Republic of Uzbekistan.
+                    Currency exchange offices are available in every city of Uzbekistan. Read more...
+
+                    National Symbols: Flag of Uzbekistan, Emblem of Uzbekistan.
+
+                    Climate: The climate of Uzbekistan is extremely continental with a great number of sunny days.
+                    Average monthly temperature in January is from 10 to +3oC. Summer is hot and dry. Average monthly
+                    temperature in July is from +35 to +45oC. Autumn is warm enough and is the season when delicious
+                    fruits and vegetables are in abundance in numerous bazaars (markets). Average annual temperature is
+                    13oC. Read more...
+                </p>
+            </div>
+            <div class="row">
+                <button class="newPhoto">Upload new Photo</button>
+                <button class="copy">Copy</button>
+            </div>
+        </div> -->
