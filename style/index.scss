@@ -255,6 +255,8 @@ main {
 
 
     select {
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
         width: 200px;
         text-align: center;
         border-radius: 10px;

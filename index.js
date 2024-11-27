@@ -17,18 +17,36 @@ function handleProcess() {
         return;
     }
 
-
-    left.classList.add("processed_width")
-    right.classList.add("processed_width")
-
     const selectedLanguage = languageSelect.value;
+    console.log(selectedLanguage);
     const selectedFile = URL.createObjectURL(fileInput.files[0]);
 
     dataStore.img = selectedFile;
     dataStore.language = selectedLanguage;
 
-    preview(left_container, dataStore.img);
-    output(right, dataStore, uploadNewPhoto);
+    const formData = new FormData();
+    formData.append("target_lang", selectedLanguage);
+    formData.append("source_lang", "uzn_Cyrl");
+    formData.append("file", selectedFile);
+
+    fetch("https://ocr.21-students.uz/", {
+        method: "POST",
+        body: formData,
+    })
+        .then((response) => response.text())
+        .then((data) => {
+
+            left.classList.add("processed_width")
+            right.classList.add("processed_width")
+
+            dataStore.text = data.result || data;
+            preview(left_container, dataStore.img);
+            output(right, dataStore, uploadNewPhoto);
+        })
+        .catch((error) => {
+            console.error("Ошибка при отправке данных:", error);
+            alert("Ошибка при обработке файла.");
+        });
 }
 
 function uploadNewPhoto() {

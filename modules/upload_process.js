@@ -1,4 +1,4 @@
-let options = ["Language", "Russian", "English", "Uzbek"]
+let options = ["Language", "Russian", "English", "Узбек тили"]
 
 export function upload_process(container) {
     container.innerHTML = ""
@@ -14,7 +14,7 @@ export function upload_process(container) {
     for (let opt of options) {
         let option = document.createElement("option")
         option.innerHTML = opt
-        option.value = opt.toLowerCase()
+        option.value = "uzn_Cyrl"
         if (opt === "Language") {
             option.disabled = true
             option.selected = true
