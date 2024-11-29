@@ -26,7 +26,7 @@ function handleProcess() {
     
     // "http://localhost:3000/proxy"
 
-    fetch("https://ocr.21-students.uz/", {
+    fetch("http://localhost:3000/proxy", {
         method: "POST",
         body: formData,
     })
