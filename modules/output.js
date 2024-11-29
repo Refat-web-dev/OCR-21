@@ -18,7 +18,6 @@ export function output(container, dataStore, resetCallback) {
     output_title.innerHTML = "Output"
 
     output_text.innerHTML = dataStore.text
-
     // for (let i = 0; i < 50; i++) {
     //     output_text.innerHTML += dataStore.text
     // }

@@ -12,35 +12,36 @@ function handleProcess() {
         return;
     }
 
-    if (!languageSelect.value || languageSelect.value === "language") {
+    if (!languageSelect.value || languageSelect.value === "lang") {
         alert("Please select a language.");
         return;
     }
 
     const selectedLanguage = languageSelect.value;
-    console.log(selectedLanguage);
-    const selectedFile = URL.createObjectURL(fileInput.files[0]);
-
-    dataStore.img = selectedFile;
-    dataStore.language = selectedLanguage;
 
     const formData = new FormData();
     formData.append("target_lang", selectedLanguage);
-    formData.append("source_lang", "uzn_Cyrl");
-    formData.append("file", selectedFile);
+    formData.append("source_lang", selectedLanguage);
+    formData.append("file", fileInput.files[0]);
+    
+    // "http://localhost:3000/proxy"
 
     fetch("https://ocr.21-students.uz/", {
         method: "POST",
         body: formData,
     })
-        .then((response) => response.text())
+        .then((response) => response.json())
         .then((data) => {
 
-            left.classList.add("processed_width")
-            right.classList.add("processed_width")
+            left.classList.add("processed_width");
+            right.classList.add("processed_width");
 
-            dataStore.text = data.result || data;
-            preview(left_container, dataStore.img);
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data.result, 'text/html');
+            const extractedText = doc.querySelector('p') ? doc.querySelector('p').innerHTML : ''; // Извлекаем текст из первого <p>
+
+            dataStore.text = extractedText || data;
+            preview(left_container, URL.createObjectURL(fileInput.files[0]));
             output(right, dataStore, uploadNewPhoto);
         })
         .catch((error) => {
@@ -48,6 +49,7 @@ function handleProcess() {
             alert("Ошибка при обработке файла.");
         });
 }
+
 
 function uploadNewPhoto() {
     left.classList.remove("processed_width")
